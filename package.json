@@ -1,0 +1,22 @@
+{
+  "name": "mono-repo-yarn-workspaces-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run-sevice-a": "cd packages/service-a && npx ts-node main.ts && cd - ",
+    "run-sevice-b": "cd packages/service-b && npx ts-node main.ts && cd - "
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "@types/node": "^22.10.5"
+  }
+}
